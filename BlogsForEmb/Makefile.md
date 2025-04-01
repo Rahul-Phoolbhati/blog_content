@@ -202,3 +202,71 @@ all:
 > # Output is ", a , b , c". Notice the spaces introduced
 ```
 
+2. Foreach -
+		- $(foreach var,list,text)
+	```
+		foo := who are you 
+		# For each "word" in foo, output that same word with an exclamation after
+		bar := $(foreach wrd,$(foo),$(wrd)!) 
+		all: 
+			# Output is "who! are! you!" 
+			@echo $(bar)
+	```
+
+3. if - 
+		`if` checks if the first argument is nonempty. If so, runs the second argument, otherwise runs the third.
+
+```
+foo := $(if this-is-not-empty,then!,else!)
+empty :=
+bar := $(if $(empty),then!,else!)
+
+all:
+	@echo $(foo)
+	@echo $(bar)
+```
+
+4. shell - This calls the shell, but it replaces newlines with spaces!
+
+```
+all: 
+	@echo $(shell ls -la) # Very ugly because the newlines are gone!
+```
+
+5. Call -  calling a user defined function with arguments 
+ ``` 
+ sweet_new_fn = Variable Name: $(0) First: $(1) Second: $(2) Empty Variable: $(3) 
+define add_numbers
+	$(shell echo $(1) + $(2) | bc)
+endef
+
+define concat_strings
+    $(1) $(2)
+endef
+
+# Call the function with 5 and 3 as arguments
+result := $(call add_numbers, 5, 3)
+
+# Call the function with strings
+concatenated := $(call concat_strings, Hello, World)
+
+all: 
+	# Outputs "Variable Name: sweet_new_fn First: go Second: tigers Empty Variable:" 
+	@echo $(call sweet_new_fn, go, tigers)
+	@echo "The result is $(result)"
+	@echo $(concatenated)
+```
+
+
+6. filter - The `filter` function is used to select certain elements from a list that match a specific pattern. For example, this will select all elements in `obj_files` that end with `.o`.
+
+```
+obj_files = foo.result bar.o lose.o one.c two.c one.h
+filtered_files = $(filter %.o %.c %.h,$(obj_files))
+
+all:
+	@echo $(filtered_files)
+```
+-> **Negation** - `filter-out` filters the files which don't match the pattern
+-> **Nested filter**: You can nest filter functions to apply multiple filters. For example, `$(filter %.o, $(filter-out test%, $(objects)))` will select all object files that end with `.o` but don't start with `test`.
+
