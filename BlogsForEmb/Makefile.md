@@ -65,7 +65,8 @@ blah.c:
 		Danger: `*` may not be directly used in a variable definitions
 		Danger: When `*` matches no files, it is left as it is (unless run in the `wildcard` function)
 ```
-thing_wrong := *.o # Don't do this! '*' will not get expanded thing_right := $(wildcard *.o)
+thing_wrong := *.o # Don't do this! '*' will not get expanded 
+thing_right := $(wildcard *.o)
 ```
 '\%'
 
@@ -119,4 +120,85 @@ clean:
 	rm -f blah*
 ```
 
+
+#### Static Pattern Rule - 
+```
+# Syntax - 
+	targets ...: target-pattern: prereq-patterns ... 
+	# In the case of the first target, foo.o, the target-pattern matches foo.o and sets the "stem" to be "foo". # It then replaces the '%' in prereq-patterns with that stem .
+	$(objects): %.o: %.c 
+		$(CC) -c $^ -o $@
+```
+#### Pattern Rule - 
+```
+%.o : %.c 
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+```
+
+#### Double-Colon Rules - 
+```
+all: blah 
+
+blah:: 
+	echo "hello" 
+blah:: 
+	echo "hello again"
+```
+
+### Commands - 
+
+#### Silence - 
+* Using $@$ before the command or `make -s` command.
+#### Command are Executed in subshells - 
+```
+all: 
+	cd .. 
+	# The cd above does not affect this line, because each command is effectively run in a new shell 
+	echo `pwd` 
+	# This cd command affects the next because they are on the same line 
+	cd ..;echo `pwd` 
+	# Same as above 
+	cd ..; \ 
+	echo `pwd`
+```
+
+>Shell Var SHELL=/bin/bash 
+>The shell change will only impact the later targets then the declaration , previous one will be in the same shell as default /bin/sh
+>Shell Variables by `$$` not by `$` as the make variable .
+>	sh_var='I am a shell variable'; echo `$$sh_var`
+
+#### Error handling with `-k`, `-i`, and `-`
+
+- Add `-k` when running make to continue running even in the face of errors. Helpful if you want to see all the errors of Make at once.  
+- Add a `-` before a command to suppress the error  
+- Add `-i` to make to have this happen for every command.
+
+#### Exporting the vars - 
+
+* with :-    $.EXPORT_ALL_VARIABLES: $ - this will export all variables 
+* also with export variable_name
+* Exported variables can be used in recursive call 
+* can be used as shell variables 
+
+> [!NOTE]
+> When Make starts, it automatically creates Make variables out of all the environment variables that are set when it's executed.
+
+### Functions - 
+- Call functions with `$(fn, arguments)` or `${fn, arguments}`
+1. Substitute -
+```
+	comma := , 
+	empty:= 
+	space := $(empty) $(empty) 
+	foo := a b c 
+	bar := $(subst $(space),$(comma),$(foo)) 
+	
+	all: 
+		@echo $(bar)  # output a,b,c
+```
+> Do NOT include spaces in the arguments after the first. That will be seen as part of the string.
+```
+> bar := $(subst $(space), $(comma) , $(foo)) # Watch out!
+> # Output is ", a , b , c". Notice the spaces introduced
+```
 
