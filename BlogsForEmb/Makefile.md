@@ -110,6 +110,8 @@ The important variables used by implicit rules are:
 - `CXXFLAGS`: Extra flags to give to the C++ compiler
 - `CPPFLAGS`: Extra flags to give to the C preprocessor
 - `LDFLAGS`: Extra flags to give to compilers when they are supposed to invoke the linker
+
+
 ```
 CC = gcc # Flag for implicit rules 
 CFLAGS = -g # Flag for implicit rules. Turn on debug info 
@@ -121,6 +123,7 @@ blah.c:
 	echo "int main() { return 0; }" > blah.c 
 clean: 
 	rm -f blah*
+
 ```
 
 
@@ -189,6 +192,7 @@ all:
 ### Functions - 
 - Call functions with `$(fn, arguments)` or `${fn, arguments}`
 1. Substitute -
+
 ```
 	comma := , 
 	empty:= 
@@ -199,7 +203,9 @@ all:
 	all: 
 		@echo $(bar)  # output a,b,c
 ```
+
 > Do NOT include spaces in the arguments after the first. That will be seen as part of the string.
+
 ```
 > bar := $(subst $(space), $(comma) , $(foo)) # Watch out!
 > # Output is ", a , b , c". Notice the spaces introduced
@@ -237,6 +243,7 @@ all:
 ```
 
 5. Call -  calling a user defined function with arguments 
+
  ``` 
  sweet_new_fn = Variable Name: $(0) First: $(1) Second: $(2) Empty Variable: $(3) 
 define add_numbers
