@@ -8,6 +8,6 @@ Welcome to the blogs page. Here are Some content related to embedded and softwar
 ## List of Contents
 
 1. [MakeFile Things](./BlogsForEmb/Makefile.md)
-2. [Qemu Disk Image](./BlogsForEmb/QEMU%20Disk%20Image.md)
-3. [Check one](./BlogsForEmb/Check%20one.md)
+2. [Qemu Disk Image](QEMU-Disk-Image.md)
+3. [Check-one](Check-one.md)
 4. Comming Soon
