@@ -9,7 +9,6 @@ Welcome to the blogs page. Here are Some content related to embedded and softwar
 
 1. [MakeFile Things](./BlogsForEmb/Makefile.md)
 2. [Qemu Disk Image](./BlogsForEmb/QEMU-Disk-Image.md)
-3. [Running-Tiny-Core-Linux-On-Qemu](./Running-Tiny-Core-Linux-On-Qemu.md)
-
+3. [Running-Tiny-Core-Linux-On-Qemu](./BlogsForEmb/Running-Tiny-Core-Linux-On-Qemu.md)
 4. [Check-one](./BlogsForEmb/Check-one.md)
 5. Comming Soon
