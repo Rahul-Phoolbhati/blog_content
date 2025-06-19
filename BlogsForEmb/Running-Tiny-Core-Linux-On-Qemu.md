@@ -1,10 +1,9 @@
 ---
 date: 2025-06-19
-title: Qemu Emulation of Tiny Core Linux
+title: Qemu Emulation of linux
 ---
 
 
-```
 ## Download the iso image of the tiny core linux
 
 	http://www.tinycorelinux.net/downloads.html
