@@ -11,7 +11,9 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <a href="{{ "/" | relative_url }}" class="home-link">[⬅ Back]</a>
+    {% if site.title and site.title != page.title %}
+      <a href="{{ "/" | relative_url }}" class="home-link">[⬅ Back]</a>
+      {% endif %}
     <div class="container-lg px-3 my-5 markdown-body">
       <!-- {% if site.title and site.title != page.title %}
       <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
