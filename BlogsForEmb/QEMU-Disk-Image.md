@@ -1,3 +1,10 @@
+---
+layout: default
+title: My New Blog Post
+---
+## Table of Contents
+* TOC
+{:toc}
 
 ## Disk Image - 
 A **disk image** is basically a file that’s an exact copy of a whole storage device — like a hard drive, USB stick, CD, or DVD. It captures everything:
