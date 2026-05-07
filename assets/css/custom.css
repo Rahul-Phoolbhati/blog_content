@@ -14,3 +14,17 @@
 .content-wrapper {
   position: relative;
 }
+
+/* Style the auto-generated TOC */
+#markdown-toc {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1.5em;
+    background-color: #f6f8fa;
+    list-style-position: inside;
+}
+
+#markdown-toc li {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
