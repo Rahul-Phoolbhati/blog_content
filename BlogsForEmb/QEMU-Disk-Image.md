@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My New Blog Post
+title: Qemu Disk Image
 ---
 ## Table of Contents
 * TOC
