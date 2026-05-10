@@ -1,3 +1,8 @@
+---
+layout: default
+title: Socket Programming
+---
+
 # Socket Programming
 
 ## What's a socket ?
