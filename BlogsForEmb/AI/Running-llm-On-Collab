@@ -34,8 +34,6 @@ Ollama Server
 Qwen / DeepSeek / GLM model
 ```
 
-
-
 ## Setup 
 Install Ollama in Colab
 ```
