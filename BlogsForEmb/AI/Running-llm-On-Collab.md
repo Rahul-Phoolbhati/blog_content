@@ -62,6 +62,14 @@ graph TD
       C-->D;
 ```
 
+<pre class="mermaid">
+graph TD
+  A[Start] --> B{Error?}
+  B -->|Yes| C[Fix]
+  B -->|No| D[OK]
+</pre>
+
+
 ## Setup 
 Install Ollama in Colab
 ```
