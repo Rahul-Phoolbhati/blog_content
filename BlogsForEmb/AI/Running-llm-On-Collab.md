@@ -36,14 +36,6 @@ Qwen / DeepSeek / GLM model
 
 
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
-
-<pre class="mermaid">
 graph TD
     A[Laptop: VSCode / OpenWebUI] -->|Tunnel| B(ngrok / Cloudflare)
     B --> C[Google Colab GPU]
@@ -60,6 +52,43 @@ graph TD
     style A fill:#fdf,stroke:#333
     style C fill:#4285F4,color:#fff
     style D fill:#333,color:#fff
+```
+
+<pre class="mermaid">
+graph LR
+    %% Main Flow
+    subgraph Client ["Local Environment"]
+        A[Claude / VSCode]
+    end
+
+    subgraph Proxy ["Networking"]
+        B(Tunnel: ngrok / Cloudflare)
+    end
+
+    subgraph Backend ["Remote Compute (Colab)"]
+        C[Google Colab GPU]
+        D[Ollama Server]
+        
+        subgraph Models ["Intelligence Layer"]
+            E{LLM Model}
+            E --> F[Qwen]
+            E --> G[DeepSeek]
+            E --> H[GLM]
+        end
+    end
+
+    %% Connections
+    A -->|Secure Request| B
+    B -->|Forwarding| C
+    C --- D
+    D --- E
+
+    %% Styling
+    style A fill:#F5F5F7,stroke:#D2D2D7,stroke-width:2px
+    style B fill:#F97316,stroke:#333,color:#fff
+    style C fill:#4285F4,stroke:#333,color:#fff
+    style D fill:#000,stroke:#333,color:#fff
+    style E fill:#E0E7FF,stroke:#4F46E5
 </pre>
 
 

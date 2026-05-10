@@ -38,7 +38,27 @@
         theme: 'default',
         securityLevel: 'loose'
       });
+      document.addEventListener("DOMContentLoaded", function() {
+      // Look for the specific way Jekyll/kramdown renders code blocks
+      const codeBlocks = document.querySelectorAll('code.language-mermaid');
       
+      codeBlocks.forEach(block => {
+        const pre = block.parentElement;
+        const graphDefinition = block.textContent;
+        
+        // Create a new div that Mermaid can actually turn into a diagram
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = graphDefinition;
+        
+        // Replace the entire <pre><code> block with our new <div>
+        pre.insertAdjacentElement('afterend', mermaidDiv);
+        pre.remove();
+      });
+      
+      // Tell mermaid to initialize the newly created divs
+      mermaid.run();
+    });
     </script>
     <!-- <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
