@@ -12,4 +12,5 @@ Welcome to the blogs page. Here are Some content related to embedded and softwar
 3. [Running-Tiny-Core-Linux-On-Qemu](./BlogsForEmb/Running-Tiny-Core-Linux-On-Qemu)
 4. [Socket](./BlogsForEmb/socket)
 5. [Your Laptop Is Too Weak : Run Coding model on Collab](./AI/Running-llm-On-Collab)
+5. [Your Laptop Is Too Weak : Run Coding model on Collab](./BlogsForEmb/AI/Running-llm-On-Collab)
 6. [Comming Soon](./investment/investment_journal)
