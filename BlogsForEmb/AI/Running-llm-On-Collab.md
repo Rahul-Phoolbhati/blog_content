@@ -151,11 +151,11 @@ Ollama serves the model on the localhost on port 11434. URL -
 ```text
 http://localhost:11434 or http://127.0.0.1:11434
 ```
-but its not on your local machine, How will you connect it to claude code or vs code ?
+but it's not on your local machine, How will you connect it to claude code or vs code ?
 
 
 Lets tunnel this Colab's localhost url to something accessible for us. 
-Many tools like Ngrok, Piggy, localtunnel etc can be used but piggy and localtunnel gives you **403 Forbidden** becasue these services gives a middle page in front of the actual url because the tools like 
+Many tools like Ngrok, Piggy, localtunnel etc can be used but piggy and localtunnel gives you **403 Forbidden** because these services gives a middle page in front of the actual url because the tools like 
 - Claude code
 - vs Code
 - OpenCode
@@ -209,7 +209,7 @@ Fix: Do Nothing , Just wait.
 Free Colab has some limitations:
 
 - Sessions expire
-- GPU access is shared resource and also have limit of resource , More bigger models will share the GPU vRAM with offloading some work on the CPU (making the process slower).
+- GPU access is shared resource and also have limit of resources , bigger models will share the GPU vRAM with offloading some work on the CPU (making the process slower).
 - Long-running sessions may disconnect
 - TPU doesn't support most of the models
 
