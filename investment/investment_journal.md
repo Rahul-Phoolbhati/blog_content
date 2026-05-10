@@ -1,3 +1,7 @@
+---
+layout: default
+title: Investment Journal
+---
 # Basic Examples - 
 
 1. Business must offer a product or service for which the demand must grow with time. Ex. Colgate vs HP.
