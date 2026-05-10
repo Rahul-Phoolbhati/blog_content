@@ -204,6 +204,82 @@ Fix: Do Nothing , Just wait.
 
 > Ollama quantization makes it possible to run surprisingly large models even on a 15GB VRAM GPU.
 
+
+## Usage
+
+To use it from machine, lets connect to the tunnel and make a request to the model.
+
+Open the terminal and run
+```
+export OLLAMA_HOST="https://fruit-audience-gospel-saying.trycloudflare.com" 
+ollama list
+```
+This will list the models on the Colab VM. 
+
+```
+ollama run glm-4.7-flash
+```
+This will Download and run the models.
+
+### Using the OpenAI-Compatible API
+
+Ollama also exposes OpenAI-compatible routes.
+
+This means many OpenAI-based tools can directly connect to your Colab-hosted Ollama server.
+
+### OpenAI-Compatible Route
+
+```bash
+curl https://random-name.trycloudflare.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemma4:latest",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }'
+```
+
+---
+
+### Native Ollama Route
+
+```bash
+curl https://random-name.trycloudflare.com/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemma4:latest",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }'
+```
+
+
+## Connecting to CCR / Claude Code Router
+
+Tools like:
+
+- CCR (Claude Code Router)
+- OpenAI-compatible proxies
+- Many VS Code AI extensions
+
+internally use the OpenAI API format.
+
+So for connecting them to Claude Code router directly, enter the API Full URL as:
+
+```text
+https://random-name.trycloudflare.com/v1/chat/completions
+```
+
+and use your Ollama models running on Colab as the backend for your coding cli.
+
 ## Limitations
 
 Free Colab has some limitations:
