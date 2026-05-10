@@ -34,6 +34,7 @@ Ollama Server
 Qwen / DeepSeek / GLM model
 ```
 
+```mermaid
 graph TD
     A[Laptop: VSCode / OpenWebUI] -->|Tunnel| B(ngrok / Cloudflare)
     B --> C[Google Colab GPU]
@@ -50,8 +51,16 @@ graph TD
     style A fill:#fdf,stroke:#333
     style C fill:#4285F4,color:#fff
     style D fill:#333,color:#fff
+```
 
 
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
 
 ## Setup 
 Install Ollama in Colab
