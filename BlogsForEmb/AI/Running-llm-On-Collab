@@ -33,7 +33,7 @@ Ollama Server
         ↓
 Qwen / DeepSeek / GLM model
 ```
-
+<!-- 
 graph TD
     A[Laptop: VSCode / OpenWebUI] -->|Tunnel| B(ngrok / Cloudflare)
     B --> C[Google Colab GPU]
@@ -49,7 +49,7 @@ graph TD
     %% Optional Styling
     style A fill:#fdf,stroke:#333
     style C fill:#4285F4,color:#fff
-    style D fill:#333,color:#fff
+    style D fill:#333,color:#fff -->
 
 
 
