@@ -33,23 +33,6 @@ Ollama Server
         ↓
 Qwen / DeepSeek / GLM model
 ```
-<!-- 
-graph TD
-    A[Laptop: VSCode / OpenWebUI] -->|Tunnel| B(ngrok / Cloudflare)
-    B --> C[Google Colab GPU]
-    C --> D[Ollama Server]
-    D --> E{LLM Model}
-    
-    subgraph Models
-    E --> F[Qwen]
-    E --> G[DeepSeek]
-    E --> H[GLM]
-    end
-
-    %% Optional Styling
-    style A fill:#fdf,stroke:#333
-    style C fill:#4285F4,color:#fff
-    style D fill:#333,color:#fff -->
 
 
 
