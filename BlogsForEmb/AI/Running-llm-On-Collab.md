@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Run Coding model on Collab
+title: Run Coding model on Colab
 ---
 
-# Your Laptop Is Too Weak : Run Coding model on Collab
+# Your Laptop Is Too Weak : Run Coding model on Colab
 
 Tried Ollama models ?
-Strugling with bigger models on your machine ? or Don't have enough good mahine to run basic models ? and Don't have GPU 
+Struggling with bigger models on your machine ? or Don't have enough powerful machine to run basic models ? and Don't have GPU 
 
-No problem here we have Google collab gives T4 GPU free and sometimes v5e-1 TPU also
+No problem — Google Colab gives a free T4 GPU and sometimes even a v5e-1 TPU.
 
-Let's run the model on Collab with help of Ollama. But how to use them on your machine than ? for coding and other tasks ?
+Let's run the model on Colab with help of Ollama. But how to use them on your machine then ? for coding and other tasks ?
 
-We will run the models on collab and tunnel them and connect them to our machine and use them.
+We will run the models on Colab and tunnel them and connect them to our machine and use them.
 
 ## Process
 
 1. Install Ollama
 2. Start the server in the background
-3. Tunnel them (via Cloudflared)
-4. excess via Collab terminal and Local terminal
+3. Tunnel the server (via Cloudflared)
+4. access via Colab terminal and Local terminal
 
 ## Flow Diagram
 <!-- ```
@@ -95,7 +95,7 @@ Once the server is running, pull the model you’ve been dreaming of:
 ollama pull qwen2.5:14b
 ```
 
-> The above commands can be run into the terminal given by the collab or the below ones in the notebook.
+> The above commands can be run into the terminal given by the Colab or the below ones in the notebook.
 
 ```python
 import subprocess
@@ -154,8 +154,8 @@ http://localhost:11434 or http://127.0.0.1:11434
 but its not on your local machine, How will you connect it to claude code or vs code ?
 
 
-Lets tunnel this Collab's localhost url to something accessible for us. 
-Many tools like Ngrok, Piggy, localtunnel etc can be used but piggy and localtunnel gives you **403 Forbidden** becasue these servies gives a middle page in front of the actual url because the tools like 
+Lets tunnel this Colab's localhost url to something accessible for us. 
+Many tools like Ngrok, Piggy, localtunnel etc can be used but piggy and localtunnel gives you **403 Forbidden** becasue these services gives a middle page in front of the actual url because the tools like 
 - Claude code
 - vs Code
 - OpenCode
@@ -169,7 +169,7 @@ So we will use Cloudflare Tunnel.
 !chmod +x cloudflared
 ```
 
-Now we will run the ollama serve again with some environment variables -
+Now we will run Ollama serve again with some environment variables -
 
 ```
 import os
@@ -196,7 +196,7 @@ Here is your remote Ollama endpoint.
 
 ---
 ### Common Issue: `Cloudflare failed to create url`
-Due to any failed atempt previously (from other services or too many tunneling) this error may occur on Google Collab. 
+Due to any failed attempt previously (from other services or too many tunneling) this error may occur on Google Colab. 
 
 500 Internal Server Error : failed to unmarshal quick Tunnel: invalid character 'e' looking for beginning of value
 
