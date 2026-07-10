@@ -168,10 +168,20 @@ You forgot to reply
 The model generates something like:
 
 ```
-Arrey sorry 😭
+Arrey sorry 
 Got busy yaar.
 What's up now?
 ```
+
+Another - 
+```
+### Input 
+Them:
+I Love you
+```
+
+<img width="846" height="118" alt="image" src="https://github.com/user-attachments/assets/d9af5d38-4527-4d53-a1f0-e377b471ad1f" />
+
 
 Instead of sounding like ChatGPT, it sounds much closer to how I usually text.
 
