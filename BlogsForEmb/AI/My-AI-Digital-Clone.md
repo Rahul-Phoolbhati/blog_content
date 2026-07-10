@@ -1,36 +1,10 @@
-AI
-
-LLM
-
-WhatsApp
-
-Personality
+---
+layout: default
+title: Making your digital AI clone
+---
 
 Making your digital AI clone — Reply your WhatsApp chat like you do
 ===================================================================
-
-[![Rahul Phoolbhati](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*GZnDjhupYXxI9M_D)](https://medium.com/@rahulphulbhati?source=post_page---byline--6c57c7ba7b73---------------------------------------)
-
-[Rahul Phoolbhati](https://medium.com/@rahulphulbhati?source=post_page---byline--6c57c7ba7b73---------------------------------------)
-
-3 min read
-
-·
-
-Jun 29, 2026
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F6c57c7ba7b73&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40rahulphulbhati%2Fmaking-your-digital-clone-reply-your-whatsapp-chat-like-you-do-6c57c7ba7b73&user=Rahul+Phoolbhati&userId=41c9ebaa296c&source=---header_actions--6c57c7ba7b73---------------------clap_footer------------------)
-
---
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Frepost%2Fp%2F6c57c7ba7b73&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40rahulphulbhati%2Fmaking-your-digital-clone-reply-your-whatsapp-chat-like-you-do-6c57c7ba7b73&user=Rahul+Phoolbhati&userId=41c9ebaa296c&source=---header_actions--6c57c7ba7b73---------------------repost_header------------------)
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F6c57c7ba7b73&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40rahulphulbhati%2Fmaking-your-digital-clone-reply-your-whatsapp-chat-like-you-do-6c57c7ba7b73&source=---header_actions--6c57c7ba7b73---------------------bookmark_footer------------------)
-
-[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3D6c57c7ba7b73&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40rahulphulbhati%2Fmaking-your-digital-clone-reply-your-whatsapp-chat-like-you-do-6c57c7ba7b73&source=---header_actions--6c57c7ba7b73---------------------post_audio_button------------------)
-
-Share
-
 > **_Can an AI reply exactly like I would?_**
 > 
 > _I wanted to find out._
